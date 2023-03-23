@@ -11,28 +11,68 @@ const social_accounts = {
     "followers": 1987,
     "change_direction": "up",
     "change": 12,
-    "icon": icon_facebook
+    "icon": icon_facebook,
+    "page_views": {
+      "amount": 87,
+      "change": 3,
+      "change_direction": "up",
+    },
+    "likes": {
+      "amount": 5462,
+      "change": 2257,
+      "change_direction": "up"
+    }
   },
   "twitter": {
     "user": "@nathanf",
     "followers": 1044,
     "change_direction": "up",
     "change": 99,
-    "icon": icon_twitter
+    "icon": icon_twitter,
+    "likes": {
+      "amount": 507,
+      "change": 553,
+      "change_direction": "up"
+    },
+    "retweets": {
+      "amount": 117,
+      "change": 303,
+      "change_direction": "up",
+    }
   },
   "instagram": {
     "user": "@realnathanf",
     "followers": 11000,
     "change_direction": "up",
     "change": 1099,
-    "icon": icon_instagram
+    "icon": icon_instagram,
+    "likes": {
+      "amount": 5462,
+      "change": 2257,
+      "change_direction": "up"
+    },
+    "profile_views": {
+      "amount": 52000,
+      "change": 1375,
+      "change_direction": "up",
+    }
   },
   "youtube": {
     "user": "Nathan F.",
     "followers": 8239,
     "change_direction": "down",
     "change": 144,
-    "icon": icon_youtube
+    "icon": icon_youtube,
+    "likes": {
+      "amount": 5462,
+      "change": 2257,
+      "change_direction": "up"
+    },
+    "total_views": {
+      "amount": 52000,
+      "change": 1375,
+      "change_direction": "up",
+    }
   }
 }
 
