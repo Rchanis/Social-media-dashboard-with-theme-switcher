@@ -48,12 +48,12 @@ const followers_containers = Object.keys(social_accounts).map(key => {
       <h3 className="visually-hidden">{key} followers</h3>
       <div className={`w-full h-1 ${bg_bar} rounded-t-full`}></div>
       <div><img src={icon} className="inline" alt={key + "icon"} />
-        <span className="text-xs ml-2">{user}</span></div>
+        <span className="text-xs ml-2 font-bold">{user}</span></div>
       <div className="flex flex-col items-center">
-        <span className="text-6xl">{followers.length > 4 ? followers.slice(0, followers.length - 3) + "k" : followers}</span>
-        <span className="text-base tracking-[0.2rem] mt-2">FOLLOWERS</span>
+        <span className="text-6xl font-bold">{followers.length > 4 ? followers.slice(0, followers.length - 3) + "k" : followers}</span>
+        <span className="text-base tracking-[0.2rem] mt-2">{key === "youtube" ? "SUBSCRIBERS" : "FOLLOWERS"}</span>
       </div>
-      <div><img src={change_icon} alt="plus" className="inline" /> {change} Today</div>
+      <div className="text-xs font-bold" ><img src={change_icon} alt="plus" className="inline" /> {change} Today</div>
       <div></div>
     </div>
   )
