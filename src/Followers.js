@@ -83,17 +83,32 @@ const followers_containers = Object.keys(social_accounts).map(key => {
   const icon = social_accounts[key].icon;
   const change = social_accounts[key].change;
   const change_icon = social_accounts[key].change_direction === "down" ? icon_down : icon_up;
+  const change_color = social_accounts[key].change_direction === "down" ? "text-bright-red" : "text-lime-green";
+  const upper_bar = (type) => {
+    switch (type) {
+      case "facebook":
+        return <div className={`w-full h-1 bg-facebook rounded-t-full`}></div>;
+      case "instagram":
+        return <div className="w-full h-1 rounded-t-full" style={{ "backgroundImage": "linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%))" }}></div>;
+      case "twitter":
+        return <div className={`w-full h-1 bg-twitter rounded-t-full`}></div>;
+      case "youtube":
+        return <div className={`w-full h-1 bg-youtube rounded-t-full`}></div>;
+      default:
+        return <div className={`w-full h-1 bg-facebook rounded-t-full`}></div>;
+    }
+  }
   return (
     <div role="row" className="w-full h-full bg-slate-600 rounded-[0.33rem] flex flex-col items-center justify-between">
       <h3 className="visually-hidden">{key} followers</h3>
-      <div className={`w-full h-1 ${bg_bar} rounded-t-full`}></div>
+      {upper_bar(key)}
       <div><img src={icon} className="inline" alt={key + "icon"} />
         <span className="text-xs ml-2 font-bold">{user}</span></div>
       <div className="flex flex-col items-center">
         <span className="text-6xl font-bold">{followers.length > 4 ? followers.slice(0, followers.length - 3) + "k" : followers}</span>
         <span className="text-base tracking-[0.2rem] mt-2">{key === "youtube" ? "SUBSCRIBERS" : "FOLLOWERS"}</span>
       </div>
-      <div className="text-xs font-bold" ><img src={change_icon} alt="plus" className="inline" /> {change} Today</div>
+      <div className={"text-xs font-bold " + change_color} ><img src={change_icon} alt="plus" className="inline" /> {change} Today</div>
       <div></div>
     </div>
   )
