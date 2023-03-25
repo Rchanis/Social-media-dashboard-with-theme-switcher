@@ -3,7 +3,10 @@ import Overviews from "./Overviews";
 
 function Dashboard() {
     return (
-        <Followers />
+        <div>
+            <Followers />
+            <Overviews />
+        </div>
     )
 }
 
