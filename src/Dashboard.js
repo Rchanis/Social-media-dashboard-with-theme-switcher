@@ -77,8 +77,9 @@ function Dashboard() {
         }
     }
     return (
-        <div className="z-10 flex flex-col px-40 bg-white dark:bg-very-dark-blue-bg h-screen relative">
-            <div className="z-[-1] bg-very-pale-blue dark:bg-very-dark-blue-topbg h-1/3 w-screen"></div>
+        <div className="z-10 flex flex-col px-40 relative">
+            <div className="-z-10 bg-very-pale-blue dark:bg-very-dark-blue-topbg h-1/3 w-screen absolute top-0 left-0"></div>
+            <div className="-z-20 bg-white dark:bg-very-dark-blue-bg h-screen w-screen absolute top-0 left-0"></div>
             <div className="pt-7 pb-9 flex justify-between">
                 <div>
                     <h1 className="text-2xl font-bold text-very-dark-blue dark:text-white">Social Media Dashboard</h1>
