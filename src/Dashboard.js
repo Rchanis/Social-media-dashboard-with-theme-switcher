@@ -88,7 +88,8 @@ function Dashboard() {
                 <div className="flex items-center">
                     <span className="text-dark-grayish-blue dark:text-white font-bold text-sm px-4">Dark Mode</span>
                     <label class="switch">
-                        <input type="checkbox" id="theme-toggle" onClick={(element) => {
+                        <span className="visually-hidden">toggle button for color sytle</span>
+                        <input arial_label="toggle button for color sytle" type="checkbox" id="theme-toggle" onClick={(element) => {
                             console.log(element.target.checked)
                             if (!element.target.checked) {
                                 document.documentElement.classList.remove('dark');
@@ -104,7 +105,7 @@ function Dashboard() {
                 </div>
             </div>
             <Followers social_accounts={social_accounts} />
-            <h1 className="text-2xl font-bold pt-10 pb-5 text-dark-grayish-blue dark:text-white">Overview - Today</h1>
+            <h2 className="text-2xl font-bold pt-10 pb-5 text-dark-grayish-blue dark:text-white">Overview - Today</h2>
             <Overviews social_accounts={social_accounts} />
         </div>
     )

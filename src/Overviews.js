@@ -14,7 +14,7 @@ function Overviews(props) {
         let change_color = object.change_direction === "down" ? "self-end text-bright-red" : "self-end text-lime-green";
         let strnumber = object.amount.toString();
         overview_containers.push(
-            <a href={`https://www.${key}.com/${user.replace("@", "")}`} role="row" className="p-5 pt-3 pr-6 w-full h-full bg-light-grayish-blue hover:bg-light-grayish-blue-hover dark:bg-dark-desaturated-blue hover:dark:bg-dark-desaturated-blue-hover rounded-[0.33rem] flex items-center justify-between">
+            <a aria_label={`link to the ${key} account`} href={`https://www.${key}.com/${user.replace("@", "")}`} className="p-5 pt-3 pr-6 w-full h-full bg-light-grayish-blue hover:bg-light-grayish-blue-hover dark:bg-dark-desaturated-blue hover:dark:bg-dark-desaturated-blue-hover rounded-[0.33rem] flex items-center justify-between">
                 <div className="grid grid-rows-2 h-full content-between">
                     <h3 className="text-sm font-bold self-center text-dark-grayish-blue dark:text-desaturated-blue">{title.charAt(0).toUpperCase() + title.slice(1).replace(/_/g, ' ')}</h3>
                     <p className="self-end text-2xl font-bold text-very-dark-blue dark:text-white">{strnumber.length > 4 ? strnumber.slice(0, strnumber.length - 3) + "k" : strnumber}</p>
@@ -32,7 +32,7 @@ function Overviews(props) {
         change_color = object.change_direction === "down" ? "self-end text-bright-red" : "self-end text-lime-green";
         strnumber = object.amount.toString();
         overview_containers.push(
-            <a href={`https://www.${key}.com/${user.replace("@", "")}`} role="row" className="p-5 pt-3 pr-6 w-full h-full bg-light-grayish-blue hover:bg-light-grayish-blue-hover dark:bg-dark-desaturated-blue hover:dark:bg-dark-desaturated-blue-hover rounded-[0.33rem] flex items-center justify-between">
+            <a aria_label={`link to the ${key} account`} href={`https://www.${key}.com/${user.replace("@", "")}`} className="p-5 pt-3 pr-6 w-full h-full bg-light-grayish-blue hover:bg-light-grayish-blue-hover dark:bg-dark-desaturated-blue hover:dark:bg-dark-desaturated-blue-hover rounded-[0.33rem] flex items-center justify-between">
                 <div className="grid grid-rows-2 h-full content-between">
                     <h3 className="text-sm font-bold self-center text-dark-grayish-blue dark:text-desaturated-blue">{title.charAt(0).toUpperCase() + title.slice(1).replace(/_/g, ' ')}</h3>
                     <p className="self-end text-2xl font-bold text-very-dark-blue dark:text-white">{strnumber.length > 4 ? strnumber.slice(0, strnumber.length - 3) + "k" : strnumber}</p>
@@ -50,7 +50,7 @@ function Overviews(props) {
     return (
         <header className="Overviews">
             <h2 className="visually-hidden">Overview of the day</h2>
-            <div className="grid grid-cols-4 gap-8 h-64 grid-rows-2" role="rowgroup">
+            <div className="grid grid-cols-4 gap-8 h-64 grid-rows-2">
                 {overview_containers[0]}
                 {overview_containers[1]}
                 {overview_containers[4]}

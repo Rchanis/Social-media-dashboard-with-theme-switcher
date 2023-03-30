@@ -28,7 +28,7 @@ function Followers(props) {
       }
     }
     return (
-      <a href={`https://www.${key}.com/${user.replace("@", "")}`} role="row" className="w-full h-full bg-light-grayish-blue hover:bg-light-grayish-blue-hover dark:bg-dark-desaturated-blue hover:dark:bg-dark-desaturated-blue-hover text-dark-grayish-blue dark:text-desaturated-blue rounded-[0.33rem] flex flex-col items-center justify-between">
+      <a aria_label={`link to the ${key} account`} href={`https://www.${key}.com/${user.replace("@", "")}`} className="w-full h-full bg-light-grayish-blue hover:bg-light-grayish-blue-hover dark:bg-dark-desaturated-blue hover:dark:bg-dark-desaturated-blue-hover text-dark-grayish-blue dark:text-desaturated-blue rounded-[0.33rem] flex flex-col items-center justify-between">
         <h3 className="visually-hidden">{key} followers</h3>
         {upper_bar(key)}
         <div><img src={icon} className="inline" alt={key + " icon"} />
@@ -46,7 +46,7 @@ function Followers(props) {
   return (
     <header className="Followers ">
       <h2 className="visually-hidden">Followers</h2>
-      <div className="grid grid-cols-4 gap-8 h-56 min-w-fit" role="rowgroup">
+      <div className="grid grid-cols-4 gap-8 h-56 min-w-fit">
         {followers_containers}
       </div>
     </header>
